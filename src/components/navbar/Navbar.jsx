@@ -9,7 +9,7 @@ function Navbar() {
   const { pathname } = useLocation();
 
   const isActive = () => {
-    window.scrollY > 0 ? setActive(true) : setActive(false);
+    window.scrollY > 0 ? setActive(false) : setActive(false);
   };
 
   useEffect(() => {
@@ -45,7 +45,7 @@ function Navbar() {
           {currentUser ? (
             <div className="user" onClick={()=>setOpen(!open)}>
               <img
-                src="/public/img/myphoto.jpg"
+                src="/public/img/suuraa.jpg"
                 alt=""
               />
               <span>{currentUser?.username}</span>
