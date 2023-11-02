@@ -1,23 +1,27 @@
 import React from 'react'
-import "./MyGigs.scss"
+import "./Orders.scss"
 import { Link } from 'react-router-dom'
-const MyGigs = () => {
+const Orders = () => {
+  
+  const currentUser = {
+    id: 1,
+    username: "Sebona Ifa",
+    isSeller: true,
+  };
+
   return (
-    <div className='myGigs'>
+    <div className='orders'>
       <div className="container">
         <div className="title">
-          <h1>Gigs</h1>
-          <Link to="/add">
-            <button>Add New Gig</button>
-          </Link>
+          <h1>Orders</h1>
         </div>
         <table>
           <tr>
             <th>Images</th>
             <th>Title</th>
             <th>Price</th>
-            <th>Sales</th>
-            <th>Action</th>
+            <th>{currentUser?.isSeller ? "Buyer":"Seller"}</th>
+            <th>Contact</th>
           </tr>
           <tr>
             <td>
@@ -31,22 +35,7 @@ const MyGigs = () => {
             <td>88</td>
             <td>123</td>
             <td>  
-              <img className='delete' src="/img/delete.png" alt="" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-            <img
-                className="image"
-                src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
-            </td>
-            <td>Gig1</td>
-            <td>88</td>
-            <td>123</td>
-            <td>  
-              <img className='delete' src="/img/delete.png" alt="" />
+              <img className='delete' src="/img/message.png" alt="" />
             </td>
           </tr>
           <tr>
@@ -61,7 +50,7 @@ const MyGigs = () => {
             <td>88</td>
             <td>123</td>
             <td>  
-              <img className='delete' src="/img/delete.png" alt="" />
+              <img className='delete' src="/img/message.png" alt="" />
             </td>
           </tr>
           <tr>
@@ -76,7 +65,7 @@ const MyGigs = () => {
             <td>88</td>
             <td>123</td>
             <td>  
-              <img className='delete' src="/img/delete.png" alt="" />
+              <img className='delete' src="/img/message.png" alt="" />
             </td>
           </tr>
           <tr>
@@ -91,7 +80,22 @@ const MyGigs = () => {
             <td>88</td>
             <td>123</td>
             <td>  
-              <img className='delete' src="/img/delete.png" alt="" />
+              <img className='delete' src="/img/message.png" alt="" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <img
+                className="image"
+                src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt=""
+              />
+            </td>
+            <td>Gig1</td>
+            <td>88</td>
+            <td>123</td>
+            <td>  
+              <img className='delete' src="/img/message.png" alt="" />
             </td>
           </tr>
         </table>
@@ -100,4 +104,4 @@ const MyGigs = () => {
   )
 }
 
-export default MyGigs
+export default Orders
